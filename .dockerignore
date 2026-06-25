@@ -1,0 +1,8 @@
+.venv
+__pycache__
+.git
+.pytest_cache
+data/raw/*
+data/processed/*
+maps/*.html
+*.pyc
