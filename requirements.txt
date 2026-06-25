@@ -1,0 +1,9 @@
+pandas
+geopandas
+shapely
+sqlalchemy
+geoalchemy2
+psycopg2-binary
+python-dotenv
+folium
+faker
