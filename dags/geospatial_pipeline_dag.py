@@ -48,7 +48,7 @@ def geospatial_data_pipeline():
 
     @task
     def create_analytics_views():
-        run_command("psql postgresql://postgres:postgres@postgres:5432/geodb -f sql/02_create_views.sql")
+        run_command("python src/create_views.py")
 
     @task
     def generate_interactive_map():
