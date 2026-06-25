@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 import folium
 import geopandas as gpd
@@ -7,7 +8,7 @@ from folium.plugins import HeatMap, MarkerCluster
 from sqlalchemy import create_engine
 
 
-DATABASE_URL = "postgresql://postgres:postgres@localhost:5433/geodb"
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5433/geodb")
 OUTPUT_PATH = Path("maps/occurrences_map.html")
 
 

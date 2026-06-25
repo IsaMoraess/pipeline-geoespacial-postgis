@@ -1,11 +1,12 @@
 from pathlib import Path
+import os
 
 import geopandas as gpd
 import pandas as pd
 from sqlalchemy import create_engine, text
 
 
-DATABASE_URL = "postgresql://postgres:postgres@localhost:5433/geodb"
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5433/geodb")
 
 CLEAN_GEOJSON_PATH = Path("data/processed/occurrences_clean.geojson")
 REJECTED_CSV_PATH = Path("data/processed/rejected_occurrences.csv")
